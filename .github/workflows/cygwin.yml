@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Ensure scripts are unix compatible
-      run: dos2unix deploy.sh
+      run: dos2unix openshift-install-powervs
 
     - name: Install cygwin base packages with chocolatey
       shell: pwsh
