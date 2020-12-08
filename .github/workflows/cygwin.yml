@@ -24,7 +24,7 @@ jobs:
         choco install --no-progress cygwin --version 3.1.6 > $nul
         choco install cyg-get > $null
         Install-Package -Name NuGet -Force
-        Install-Package -Name DateTimeExtensions -Force
+        Install-Package -Name Date -Force
 
     - name: Running setup
       run: C:\tools\cygwin\bin\bash.exe openshift-install-powervs setup
