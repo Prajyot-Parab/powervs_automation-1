@@ -21,6 +21,9 @@ jobs:
       run: |
         which git
         ls 'C:\Program Files\Git\'
+        ls 'C:\Program Files\Git\bin\'
+        ls 'C:\Program Files\Git\cmd\'
+        ls 'C:\Program Files\Git\mingw64\'
 
     - name: Install cygwin base packages with chocolatey
       shell: pwsh
