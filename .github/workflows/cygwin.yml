@@ -24,6 +24,9 @@ jobs:
         ls 'C:\Program Files\Git\bin\'
         ls 'C:\Program Files\Git\cmd\'
         ls 'C:\Program Files\Git\mingw64\'
+        ls 'C:\'
+        ls 'C:\cygwin\bin\'
+        ls 'C:\cygwin64\bin\'
         rm 'C:\Program Files\Git\bin\bash.exe' -Force
 
     - name: Install cygwin base packages with chocolatey
