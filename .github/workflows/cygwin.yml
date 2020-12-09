@@ -17,20 +17,18 @@ jobs:
     - name: Ensure scripts are unix compatible
       run: dos2unix openshift-install-powervs
 
-    - name: Running cygwin
+    - name: Check
       run: |
-        lynx -source rawgit.com/transcode-open/apt-cyg/master/apt-cyg > apt-cyg
-        install apt-cyg /bin
+        which git
+        whereis git
+        ls -la C:\Program Files\Git\
 
     - name: Install cygwin base packages with chocolatey
       shell: pwsh
       run: |
-        choco uninstall git.install -y -f
+        #choco uninstall git.install -y -f
         choco install --no-progress cygwin --version 3.1.6 > $nul
         choco install cyg-get > $null
-
-    - name: Running cygwin
-      run: C:\tools\cygwin\bin\bash.exe apt-cyg install date
 
     - name: Running setup
       run: C:\tools\cygwin\bin\bash.exe openshift-install-powervs setup
