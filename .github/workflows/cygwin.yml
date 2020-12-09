@@ -20,7 +20,7 @@ jobs:
     - name: Check
       run: |
         which git
-        ls -la C:\Program Files\Git\
+        ls C:\Program Files\Git\
 
     - name: Install cygwin base packages with chocolatey
       shell: pwsh
